@@ -5,3 +5,5 @@ syms x y z fix fiy fiz
 
 %Cardan angles
 TCA=Tfix(fix)*Tfiy(fiy)*Tfiz(fiz)
+
+%zmena
