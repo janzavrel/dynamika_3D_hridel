@@ -1,0 +1,20 @@
+%% Symbolic expression of Cardan angles
+clear all, close all, clc
+
+syms x y z fix fiy fiz fixt fiyt fizt fixtt fiytt fiztt
+
+%Cardan angles
+TCA=Tfix(fix)*Tfiy(fiy)*Tfiz(fiz)
+TCAt=Tfix(fix)*Dfix(fixt)*Tfiy(fiy)*Tfiz(fiz)+...
+     Tfix(fix)*Tfiy(fiy)*Dfiy(fiyt)*Tfiz(fiz)+...
+     Tfix(fix)*Tfiy(fiy)*Tfiz(fiz)*Dfiz(fizt)
+TCAI=Tfiz(-fiz)*Tfiy(-fiy)*Tfix(-fix);
+VCA=TCAI*TCAt;
+ACA=Tfiz(-fiz)*Dfiz(-fizt)*Tfiy(-fiy)*Dfix(fixt)*Tfiy(fiy)*Tfiz(fiz)+...
+    Tfiz(-fiz)*Tfiy(-fiy)Dfiz(-fizt)**Dfix(fixt)*Tfiy(fiy)*Tfiz(fiz)+...
+ 
+omx=simplify(-VCA(2,3))
+omy=simplify(VCA(1,3))
+omz=simplify(-VCA(1,2))
+
+ 
