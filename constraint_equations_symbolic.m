@@ -4,7 +4,8 @@ clear all, close all, clc
 syms xSi ySi zSi xAi yAi zAi fixi fiyi fizi 
 syms xSj ySj zSj xAj yAj zAj fixj fiyj fizj 
 
-%% spherical jointsyms xSi ySi zSi xAi yAi zAi xSi ySi zSi xAi yAi zAi fixi fiyi fizi 
+%% spherical joint 
+syms xSi ySi zSi xAi yAi zAi xSi ySi zSi xAi yAi zAi fixi fiyi fizi 
 % A point position (S is the center of gravity)
 
 rAi=[xSi; ySi; zSi; 1] + Tfix(fixi)*Tfiy(fiyi)*Tfiz(fizi)*[xAi; yAi; zAi; 1];
