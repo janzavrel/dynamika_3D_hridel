@@ -14,6 +14,9 @@ f=rAi-rAj;
 
 J=[diff(f, 'xSi'), diff(f, 'ySi'), diff(f, 'zSi'), diff(f, 'fixi'), diff(f, 'fiyi'), diff(f, 'fizi'), diff(f, 'xSj'), diff(f, 'ySj'), diff(f, 'zSj'), diff(f, 'fixj'), diff(f, 'fiyj'), diff(f, 'fizj')];
 
+J_final=J;
+
+
 syms XSI(T) YSI(T) ZSI(T) FIXI(T) FIYI(T) FIZI(T)
 syms XSJ(T) YSJ(T) ZSJ(T) FIXJ(T) FIYJ(T) FIZJ(T) 
 syms T
@@ -34,40 +37,37 @@ J=subs(J, fizj, FIZJ(T));
 %time derivative
 Jt=diff(J, T);
 
+Jt_final=Jt;
+
 syms xSit ySit zSit fixit fiyit fizit
 syms xSjt ySjt zSjt fixjt fiyjt fizjt
 
-Jt=subs(Jt, diff(XSI(T), T), xSit);
-Jt=subs(Jt, diff(YSI(T), T), ySit);
-Jt=subs(Jt, diff(ZSI(T), T), zSit);
-Jt=subs(Jt, diff(FIXI(T), T), fixit);
-Jt=subs(Jt, diff(FIYI(T), T), fiyit);
-Jt=subs(Jt, diff(FIZI(T), T), fizit);
-Jt=subs(Jt, XSI(T), xSi);
-Jt=subs(Jt, YSI(T), ySi);
-Jt=subs(Jt, ZSI(T), zSi);
-Jt=subs(Jt, FIXI(T), fixi);
-Jt=subs(Jt, FIYI(T), fiyi);
-Jt=subs(Jt, FIZI(T), fizi);
+Jt_final=subs(Jt_final, diff(XSI(T), T), xSit);
+Jt_final=subs(Jt_final, diff(YSI(T), T), ySit);
+Jt_final=subs(Jt_final, diff(ZSI(T), T), zSit);
+Jt_final=subs(Jt_final, diff(FIXI(T), T), fixit);
+Jt_final=subs(Jt_final, diff(FIYI(T), T), fiyit);
+Jt_final=subs(Jt_final, diff(FIZI(T), T), fizit);
+Jt_final=subs(Jt_final, XSI(T), xSi);
+Jt_final=subs(Jt_final, YSI(T), ySi);
+Jt_final=subs(Jt_final, ZSI(T), zSi);
+Jt_final=subs(Jt_final, FIXI(T), fixi);
+Jt_final=subs(Jt_final, FIYI(T), fiyi);
+Jt_final=subs(Jt_final, FIZI(T), fizi);
 
-Jt=subs(Jt, diff(XSJ(T), T), xSjt);
-Jt=subs(Jt, diff(YSJ(T), T), ySjt);
-Jt=subs(Jt, diff(ZSJ(T), T), zSjt);
-Jt=subs(Jt, diff(FIXJ(T), T), fixjt);
-Jt=subs(Jt, diff(FIYJ(T), T), fiyjt);
-Jt=subs(Jt, diff(FIZJ(T), T), fizjt);
-Jt=subs(Jt, XSJ(T), xSj);
-Jt=subs(Jt, YSJ(T), ySj);
-Jt=subs(Jt, ZSJ(T), zSj);
-Jt=subs(Jt, FIXJ(T), fixj);
-Jt=subs(Jt, FIYJ(T), fiyj);
-Jt=subs(Jt, FIZJ(T), fizj);
+Jt_final=subs(Jt_final, diff(XSJ(T), T), xSjt);
+Jt_final=subs(Jt_final, diff(YSJ(T), T), ySjt);
+Jt_final=subs(Jt_final, diff(ZSJ(T), T), zSjt);
+Jt_final=subs(Jt_final, diff(FIXJ(T), T), fixjt);
+Jt_final=subs(Jt_final, diff(FIYJ(T), T), fiyjt);
+Jt_final=subs(Jt_final, diff(FIZJ(T), T), fizjt);
+Jt_final=subs(Jt_final, XSJ(T), xSj);
+Jt_final=subs(Jt_final, YSJ(T), ySj);
+Jt_final=subs(Jt_final, ZSJ(T), zSj);
+Jt_final=subs(Jt_final, FIXJ(T), fixj);
+Jt_final=subs(Jt_final, FIYJ(T), fiyj);
+Jt_final=subs(Jt_final, FIZJ(T), fizj);
 
-
-
-
-%str2sym
-%Jt=diff(J)
 
 
 

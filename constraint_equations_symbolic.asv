@@ -32,20 +32,37 @@ J=subs(J, fiyj, FIYJ(T));
 J=subs(J, fizj, FIZJ(T));
 
 %time derivative
-Jt=diff(J, T)
+Jt=diff(J, T);
 
 syms xSit ySit zSit fixit fiyit fizit
 syms xSjt ySjt zSjt fixjt fiyjt fizjt
 
-subs(Jt(2,4), diff(FIXI(T), T), fixit)
-subs(Jt(2,4), diff(FIXI(T), T), fixit)
+Jt=subs(Jt, diff(XSI(T), T), xSit);
+Jt=subs(Jt, diff(YSI(T), T), ySit);
+Jt=subs(Jt, diff(ZSI(T), T), zSit);
+Jt=subs(Jt, diff(FIXI(T), T), fixit);
+Jt=subs(Jt, diff(FIYI(T), T), fiyit);
+Jt=subs(Jt, diff(FIZI(T), T), fizit);
+Jt=subs(Jt, XSI(T), xSi);
+Jt=subs(Jt, YSI(T), ySi);
+Jt=subs(Jt, ZSI(T), zSi);
+Jt=subs(Jt, FIXI(T), fixi);
+Jt=subs(Jt, FIYI(T), fiyi);
+Jt=subs(Jt, FIZI(T), fizi);
 
+Jt=subs(Jt, diff(XSJ(T), T), xSjt);
+Jt=subs(Jt, diff(YSJ(T), T), ySjt);
+Jt=subs(Jt, diff(ZSJ(T), T), zSjt);
+Jt=subs(Jt, diff(FIXJ(T), T), fixjt);
+Jt=subs(Jt, diff(FIYJ(T), T), fiyjt);
+Jt=subs(Jt, diff(FIZJ(T), T), fizjt);
+Jt=subs(Jt, XSJ(T), xSj);
+Jt=subs(Jt, YSJ(T), ySj);
+Jt=subs(Jt, ZSJ(T), zSj);
+Jt=subs(Jt, FIXJ(T), fixj);
+Jt=subs(Jt, FIYJ(T), fiyj);
+Jt=subs(Jt, FIZJ(T), fizj);
 
-
-
-
-%str2sym
-%Jt=diff(J)
 
 
 
