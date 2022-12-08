@@ -42,9 +42,9 @@ I=[Ix -Dxy -Dxz
    -Dxy Iy -Dyz
    -Dxz -Dyz Iz];
 
-oma=[0 -omz omy
-     omz 0 -omx
-     -omy omx 0];
+oma=[0 -omegaz omegay
+     omegaz 0 -omegax
+     -omegay omegax 0];
 I*[alx; aly; alz]+oma*I*[omx; omy; omz];
 % Ix*alx - Dxz*alz - Dxy*aly + omx*(Dxy*omz - Dxz*omy) - omy*(Dyz*omy + Iy*omz) + omz*(Dyz*omz + Iz*omy)
 % Iy*aly - Dyz*alz - Dxy*alx - omy*(Dxy*omz - Dyz*omx) + omx*(Dxz*omx + Ix*omz) - omz*(Dxz*omz + Iz*omx)
